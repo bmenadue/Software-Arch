@@ -16,11 +16,22 @@ namespace OrderEntryDataAccess
         /// <param name="context">The database.</param>
         protected override void Seed(OrderEntryContext context)
         {
+
+            var locations = new List<Location>
+                {
+                    new Location { Name = "Warehouse", City="Stevens Point", Description="Over yander", State="WI" },
+                    new Location { Name = "Backyard", City="Stevens Point", Description="Over yander", State="WI" },
+                 };
+
+            context.Locations.AddRange(locations);
+
+            context.SaveChanges();
+
             var products = new List<Product>
                 {
-                    new Product { Name = "Toy", Description="Toy boi", Location="Warehouse", Price=0.99m },
-                    new Product { Name = "Car", Description="Toy boi", Location="Warehouse", Price=0.99m  },
-                    new Product { Name = "House", Description="Toy boi", Location="Warehouse", Price=0.99m  }
+                    new Product { Name = "Toy", Description="Toy boi", LocationID=1, Price=0.99m },
+                    new Product { Name = "Car", Description="Toy boi", LocationID=2, Price=0.99m  },
+                    new Product { Name = "House", Description="Toy boi", LocationID=1, Price=0.99m  }
                  };
 
             context.Products.AddRange(products);
@@ -37,15 +48,6 @@ namespace OrderEntryDataAccess
 
             context.SaveChanges();
 
-            var locations = new List<Location>
-                {
-                    new Location { Name = "Warehouse", City="Stevens Point", Description="Over yander", State="WI" },
-                    new Location { Name = "Backyard", City="Stevens Point", Description="Over yander", State="WI" },
-                 };
-
-            context.Locations.AddRange(locations);
-
-            context.SaveChanges();
         }
     }
 }

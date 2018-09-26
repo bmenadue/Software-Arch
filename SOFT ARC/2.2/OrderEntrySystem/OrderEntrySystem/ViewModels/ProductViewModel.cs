@@ -96,7 +96,7 @@ namespace OrderEntrySystem
         /// <summary>
         /// Gets or sets the Location property.
         /// </summary>
-        public string Location
+        public Location Location
         {
             get
             {
@@ -109,6 +109,8 @@ namespace OrderEntrySystem
                 this.OnPropertyChanged("Location");
             }
         }
+
+        public IEnumerable<Location> Locations { get { return this.repo.GetLocations(); } }
 
         /// <summary>
         /// Gets or sets the Name property.
