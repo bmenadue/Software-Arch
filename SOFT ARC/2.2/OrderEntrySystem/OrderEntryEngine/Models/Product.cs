@@ -14,6 +14,10 @@ namespace OrderEntryEngine.Models
 
         public int LocationID { get; set; }
 
+        public virtual Category Category { get; set; }
+
+        public int CategroyID { get; set; }
+
         /// <summary>
         /// Gets or sets the Name field.
         /// </summary>

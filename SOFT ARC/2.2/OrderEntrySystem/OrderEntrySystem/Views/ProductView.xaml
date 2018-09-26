@@ -26,7 +26,10 @@
         <Label x:Name="lblCondition" Content="Condition:" Grid.Column="0" Grid.Row="8"></Label>
         <ComboBox x:Name="cmbConditions" ItemsSource="{Binding Conditions}" SelectedItem="{Binding Condition}" Grid.Column="2" Grid.Row="8"></ComboBox>
 
-        <ContentControl Content="{Binding Commands}" ContentTemplate="{StaticResource HorizontalCommandsTemplate}" Grid.Column="2" Grid.Row="10"></ContentControl>
+        <Label x:Name="lblCategory" Content="Categories:" Grid.Column="0" Grid.Row="10"></Label>
+        <ComboBox x:Name="cmbCategory" ItemsSource="{Binding Categories}" SelectedItem="{Binding Category}" Grid.Column="2" Grid.Row="10"></ComboBox>
+
+        <ContentControl Content="{Binding Commands}" ContentTemplate="{StaticResource HorizontalCommandsTemplate}" Grid.Column="2" Grid.Row="12"></ContentControl>
         
         
         <Grid.ColumnDefinitions>
@@ -36,6 +39,8 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />

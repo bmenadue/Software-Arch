@@ -63,6 +63,19 @@ namespace OrderEntrySystem
         }
 
         /// <summary>
+        /// This method creates a new view model.
+        /// </summary>
+        public void CreateNewCategoy()
+        {
+            Category category = new Category { Name ="Dumb" };
+            CategoryViewModel cvm = new CategoryViewModel(category, this.repo);
+            cvm.RequestClose += this.OnWorkspaceRequestClose;
+            this.ViewModels.Add(cvm);
+            this.ActivateViewModel(cvm);
+        }
+
+
+        /// <summary>
         /// This method creates a new view model of customer.
         /// </summary>
         public void CreateNewCustomer()
@@ -104,6 +117,24 @@ namespace OrderEntrySystem
 
             this.ActivateViewModel(viewModel);
         }
+
+        /// <summary>
+        /// Shows all products.
+        /// </summary>
+        public void ShowAllCategorys()
+        {
+            MultiCategoryViewModel viewModel = this.ViewModels.FirstOrDefault(vm => vm is MultiCategoryViewModel) as MultiCategoryViewModel;
+
+            if (viewModel == null)
+            {
+                MultiCategoryViewModel mcvm = new MultiCategoryViewModel(this.repo);
+                mcvm.RequestClose += this.OnWorkspaceRequestClose;
+                this.ViewModels.Add(mcvm);
+            }
+
+            this.ActivateViewModel(viewModel);
+        }
+
 
         /// <summary>
         /// Shows all customers.
@@ -149,6 +180,8 @@ namespace OrderEntrySystem
             this.Commands.Add(new CommandViewModel("View all products", new DelegateCommand(p => this.ShowAllProducts())));
             this.Commands.Add(new CommandViewModel("View all customers", new DelegateCommand(p => this.ShowAllCustomers())));
             this.Commands.Add(new CommandViewModel("View all locaitons", new DelegateCommand(p => this.ShowAllLocations())));
+            this.Commands.Add(new CommandViewModel("View all categorys", new DelegateCommand(p => this.ShowAllCategorys())));
+
         }
 
         /// <summary>

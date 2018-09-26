@@ -110,7 +110,23 @@ namespace OrderEntrySystem
             }
         }
 
+        public Category Category
+        {
+            get
+            {
+                return this.product.Category;
+            }
+            set
+            {
+                this.product.Category = value;
+                this.OnPropertyChanged("Category");
+            }
+        }
+
         public IEnumerable<Location> Locations { get { return this.repo.GetLocations(); } }
+
+        public IEnumerable<Category> Categories { get { return this.repo.GetCategories(); } }
+
 
         /// <summary>
         /// Gets or sets the Name property.

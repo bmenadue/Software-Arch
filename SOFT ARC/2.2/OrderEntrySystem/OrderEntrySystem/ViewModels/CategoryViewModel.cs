@@ -1,14 +1,17 @@
-﻿using System.Windows.Input;
-using OrderEntryDataAccess;
+﻿using OrderEntryDataAccess;
 using OrderEntryEngine;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace OrderEntrySystem
 {
-    /// <summary>
-    /// Represents a location view model, which is a work space view model.
-    /// </summary>
-    public class LocationViewModel : WorkspaceViewModel
+    public class CategoryViewModel : WorkspaceViewModel
     {
+
         /// <summary>
         /// The save command.
         /// </summary>
@@ -22,7 +25,7 @@ namespace OrderEntrySystem
         /// <summary>
         /// The location field.
         /// </summary>
-        private Location location;
+        private Category category;
 
         /// <summary>
         /// The repository field. 
@@ -34,10 +37,10 @@ namespace OrderEntrySystem
         /// </summary>
         /// <param name="location">The location.</param>
         /// <param name="repo">The repository.</param>
-        public LocationViewModel(Location location, Repository repo)
-            : base("Location")
+        public CategoryViewModel(Category category, Repository repo)
+            : base("Category")
         {
-            this.location = location;
+            this.category = category;
             this.repo = repo;
         }
 
@@ -81,64 +84,13 @@ namespace OrderEntrySystem
         {
             get
             {
-                return this.location.Name;
+                return this.category.Name;
             }
 
             set
             {
-                this.location.Name = value;
+                this.category.Name = value;
                 this.OnPropertyChanged("Name");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the Description property.
-        /// </summary>
-        public string Description
-        {
-            get
-            {
-                return this.location.Description;
-            }
-
-            set
-            {
-                this.location.Description = value;
-                this.OnPropertyChanged("Description");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the City.
-        /// </summary>
-        public string City
-        {
-            get
-            {
-                return this.location.City;
-            }
-
-            set
-            {
-                this.location.City = value;
-                this.OnPropertyChanged("City");
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the State.
-        /// </summary>
-        public string State
-        {
-            get
-            {
-                return this.location.State;
-            }
-
-            set
-            {
-                this.location.State = value;
-                this.OnPropertyChanged("State");
             }
         }
 
@@ -167,9 +119,10 @@ namespace OrderEntrySystem
         /// </summary>
         private void Save()
         {
-            this.repo.AddLocation(this.location);
+            this.repo.AddCategory(this.category);
 
             this.repo.SaveToDatabase();
         }
+
     }
 }

@@ -37,5 +37,10 @@ namespace OrderEntryDataAccess
         /// Gets or sets the Locations.
         /// </summary>
         public DbSet<Location> Locations { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Locations.
+        /// </summary>
+        public DbSet<Category> Categorys { get; set; }
     }
 }

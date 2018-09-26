@@ -25,6 +25,10 @@
         <local:MultiLocationView></local:MultiLocationView>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type local:MultiCategoryViewModel}">
+        <local:MultiCategoryView></local:MultiCategoryView>
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type local:WorkspaceWindow}">
         <local:WorkspaceWindow></local:WorkspaceWindow>
     </DataTemplate>

@@ -33,6 +33,12 @@ namespace OrderEntryDataAccess
         /// </summary>
         public event EventHandler<LocationEventArgs> LocationAdded;
 
+        /// <summary>
+        /// Event for adding location.
+        /// </summary>
+        public event EventHandler<CategoryEventArgs> CategoryAdded;
+
+
         #endregion
 
         /// <summary>
@@ -69,6 +75,15 @@ namespace OrderEntryDataAccess
         public List<Location> GetLocations()
         {
             return this.context.Locations.ToList();
+        }
+
+        /// <summary>
+        /// Gets the locations.
+        /// </summary>
+        /// <returns>The list of locations.</returns>
+        public List<Category> GetCategories()
+        {
+            return this.context.Categorys.ToList();
         }
         #endregion
 
@@ -123,6 +138,24 @@ namespace OrderEntryDataAccess
                 }
             }
         }
+
+        /// <summary>
+        /// When you add a location.
+        /// </summary>
+        /// <param name="location">The location being added.</param>
+        public void AddCategory(Category category)
+        {
+            if (!this.ContainsCategory(category))
+            {
+                this.context.Categorys.Add(category);
+
+                if (this.CategoryAdded != null)
+                {
+                    this.CategoryAdded(this, new CategoryEventArgs(category));
+                }
+            }
+        }
+
         #endregion
 
         #region contains
@@ -155,6 +188,17 @@ namespace OrderEntryDataAccess
         {
             return this.GetProduct(product.Id) != null;
         }
+
+        /// <summary>
+        /// Checks if it contains the product.
+        /// </summary>
+        /// <param name="product">The product being checked.</param>
+        /// <returns>True or false.</returns>
+        private bool ContainsCategory(Category category)
+        {
+            return this.GetCategory(category.Id) != null;
+        }
+
         #endregion
 
         #region get items
@@ -187,6 +231,16 @@ namespace OrderEntryDataAccess
         private Location GetLocation(int id)
         {
             return this.context.Locations.Find(id);
+        }
+
+        /// <summary>
+        /// Gets the locations.
+        /// </summary>
+        /// <returns>The list of locations.</returns>
+        /// <param name="id">The id of the location.</param>
+        private Category GetCategory(int id)
+        {
+            return this.context.Categorys.Find(id);
         }
 
         #endregion

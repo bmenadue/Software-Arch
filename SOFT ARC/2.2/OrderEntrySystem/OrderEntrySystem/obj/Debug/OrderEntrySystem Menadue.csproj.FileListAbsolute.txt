@@ -43,3 +43,7 @@ C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntryS
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\OrderEntrySystem.pdb
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\WorkspaceWindow.g.cs
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\WorkspaceWindow.baml
+C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiCategoryView.g.cs
+C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CategoryView.g.cs
+C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiCategoryView.baml
+C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CategoryView.baml
