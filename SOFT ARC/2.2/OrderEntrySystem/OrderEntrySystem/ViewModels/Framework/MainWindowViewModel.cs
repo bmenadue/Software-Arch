@@ -145,7 +145,6 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
-            this.Commands.Add(new CommandViewModel("New product", new DelegateCommand(p => this.CreateNewProduct())));
             this.Commands.Add(new CommandViewModel("New Customer", new DelegateCommand(p => this.CreateNewCustomer())));
             this.Commands.Add(new CommandViewModel("New Location", new DelegateCommand(p => this.CreateNewLocation())));
             this.Commands.Add(new CommandViewModel("View all products", new DelegateCommand(p => this.ShowAllProducts())));

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using OrderEntryDataAccess;
 using OrderEntryEngine;
+using OrderEntryEngine.Models;
 
 namespace OrderEntrySystem
 {
@@ -58,6 +59,24 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
+            this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewProductExecute())));
+        }
+
+        private void CreateNewProductExecute()
+        {
+            ProductViewModel viewModel = new ProductViewModel(new Product(), this.repo);
+
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
+
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            ProductView view = new ProductView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
         }
 
         /// <summary>
