@@ -25,6 +25,15 @@
         <local:MultiLocationView></local:MultiLocationView>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type local:MultiCategoryViewModel}">
+        <local:MultiCategoryView></local:MultiCategoryView>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type local:WorkspaceWindow}">
+        <local:WorkspaceWindow></local:WorkspaceWindow>
+    </DataTemplate>
+
+
     <DataTemplate x:Key="WorkspacesTemplate">
         <TabControl IsSynchronizedWithCurrentItem="True" Margin="4" ItemsSource="{Binding}">
             <TabControl.ItemTemplate>
@@ -45,6 +54,21 @@
                     <Button Command="{Binding Path=Command}" Content="{Binding Path=DisplayName}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DataTemplate>
+
+    <DataTemplate x:Key="HorizontalCommandsTemplate">
+        <ItemsControl ItemsSource="{Binding}" HorizontalAlignment="Right">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding Path=Command}" Content="{Binding Path=DisplayName}" Height="23" Width="75" Margin="4,4,0,0" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
         </ItemsControl>
     </DataTemplate>
 

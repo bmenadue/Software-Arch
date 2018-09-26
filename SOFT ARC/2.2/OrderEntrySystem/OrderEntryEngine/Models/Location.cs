@@ -1,4 +1,7 @@
-﻿namespace OrderEntryEngine
+﻿using OrderEntryEngine.Models;
+using System.Collections.Generic;
+
+namespace OrderEntryEngine
 {
     /// <summary>
     /// Represents a Location.
@@ -29,5 +32,12 @@
         /// Gets or sets the field.
         /// </summary>
         public string State { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
+
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

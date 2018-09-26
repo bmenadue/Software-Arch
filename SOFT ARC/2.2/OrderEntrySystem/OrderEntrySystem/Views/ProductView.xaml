@@ -5,9 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="SharedResources.xaml" />
+    </UserControl.Resources>
+
     <Grid>
         <Label x:Name="lblLocation" Grid.Column="0" Grid.Row="0" Content="Location:" HorizontalAlignment="Left" Margin="0,7,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="txtLocation" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Height="23" Margin="1.4,7,0,0" TextWrapping="Wrap" Text="{Binding Path=Location, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" />
+        <ComboBox x:Name="txtLocation" ItemsSource="{Binding Locations}" SelectedItem="{Binding Location}" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Height="23" Margin="1.4,7,0,0" VerticalAlignment="Top" Width="120" />
 
         <Label x:Name="lblName" Content="Name:" Grid.Column="0" Grid.Row="2"></Label>
         <TextBox x:Name="txtName" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Height="23" Margin="1.4,5.2,0,6.2" TextWrapping="Wrap" Text="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Width="120"></TextBox>
@@ -18,8 +23,15 @@
         <Label x:Name="lblPrice" Content="Price:" Grid.Column="0" Grid.Row="6"></Label>
         <TextBox x:Name="txtPrice" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" Height="23" Margin="1.4,5.2,0,7.8" TextWrapping="Wrap" Text="{Binding Path=Price, UpdateSourceTrigger=PropertyChanged}" Width="120"></TextBox>
 
-        <Button x:Name="btnSave" Grid.Column="2" Grid.Row="8" Content="Save" Command="{Binding SaveCommand, UpdateSourceTrigger=PropertyChanged}"></Button>
+        <Label x:Name="lblCondition" Content="Condition:" Grid.Column="0" Grid.Row="8"></Label>
+        <ComboBox x:Name="cmbConditions" ItemsSource="{Binding Conditions}" SelectedItem="{Binding Condition}" Grid.Column="2" Grid.Row="8"></ComboBox>
 
+        <Label x:Name="lblCategory" Content="Categories:" Grid.Column="0" Grid.Row="10"></Label>
+        <ComboBox x:Name="cmbCategory" ItemsSource="{Binding Categories}" SelectedItem="{Binding Category}" Grid.Column="2" Grid.Row="10"></ComboBox>
+
+        <ContentControl Content="{Binding Commands}" ContentTemplate="{StaticResource HorizontalCommandsTemplate}" Grid.Column="2" Grid.Row="12"></ContentControl>
+        
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="4" />
@@ -27,6 +39,12 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />

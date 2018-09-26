@@ -16,36 +16,48 @@ namespace OrderEntryDataAccess
         /// <param name="context">The database.</param>
         protected override void Seed(OrderEntryContext context)
         {
+
+            var locations = new List<Location>
+            {
+                new Location { Name = "Warehouse", City="Stevens Point", Description="Over yander", State="WI" },
+                new Location { Name = "Backyard", City="Stevens Point", Description="Over yander", State="WI" },
+            };
+
+            context.Locations.AddRange(locations);
+
+            context.SaveChanges();
+
+            var catergories = new List<Category>
+            {
+                new Category { Name = "Lame"},
+                new Category { Name = "Not Lame"},
+            };
+
+            context.Categorys.AddRange(catergories);
+
+            context.SaveChanges();
+
             var products = new List<Product>
-                {
-                    new Product { Name = "Toy" },
-                    new Product { Name = "Car" },
-                    new Product { Name = "House" }
-                 };
+            {
+                new Product { Name = "Toy", Description="Toy boi", LocationID=1, CategroyID=1, Price=0.99m },
+                new Product { Name = "Car", Description="Toy boi", LocationID=2, CategroyID=1, Price=0.99m  },
+                new Product { Name = "House", Description="Toy boi", LocationID=1, CategroyID=1, Price=0.99m  }
+            };
 
             context.Products.AddRange(products);
 
             context.SaveChanges();
 
             var customers = new List<Customer>
-                {
-                    new Customer { FirstName = "Anna" },
-                    new Customer { FirstName = "Alex" },
-                 };
+            {
+                new Customer { FirstName = "Anna", Address="2640 Bush CT", City="Stevens Point", Email="email@email.com", LastName="Goldbach", Phone="911", State="WI" },
+                new Customer { FirstName = "Alex", Address="2640 Bush CT", City="Stevens Point", Email="email@email.com", LastName="Goldbach", Phone="911", State="WI" },
+            };
 
             context.Customers.AddRange(customers);
 
             context.SaveChanges();
 
-            var locations = new List<Location>
-                {
-                    new Location { Name = "Warehouse" },
-                    new Location { Name = "Backyard" },
-                 };
-
-            context.Locations.AddRange(locations);
-
-            context.SaveChanges();
         }
     }
 }

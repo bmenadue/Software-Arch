@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Windows;
 using OrderEntryDataAccess;
 using OrderEntryEngine;
 
@@ -58,6 +59,47 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
+            this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewCustomerExecute())));
+            this.Commands.Add(new CommandViewModel("Edit...", new DelegateCommand(p => this.EditCustomerExecute())));
+
+        }
+
+        private void CreateNewCustomerExecute()
+        {
+            CustomerViewModel viewModel = new CustomerViewModel(new Customer(), this.repo);
+
+            ShowCustomer(viewModel);
+        }
+
+        private void EditCustomerExecute()
+        {
+            try
+            {
+                CustomerViewModel viewModel = this.AllCustomers.SingleOrDefault(vm => vm.IsSelected);
+
+                ShowCustomer(viewModel);
+
+                this.repo.SaveToDatabase();
+            }
+            catch
+            {
+                MessageBox.Show("You can only select one customer.");
+            }
+        }
+
+        private static void ShowCustomer(CustomerViewModel viewModel)
+        {
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
+
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            CustomerView view = new CustomerView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
         }
 
         /// <summary>

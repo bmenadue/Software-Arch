@@ -1,5 +1,8 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 using OrderEntryDataAccess;
+using OrderEntryEngine;
 using OrderEntryEngine.Models;
 
 namespace OrderEntrySystem
@@ -41,6 +44,22 @@ namespace OrderEntrySystem
             this.product = product;
         }
 
+        public Condition Condition
+        {
+            get
+            {
+                return product.Condition;
+            }
+            set
+            {
+                product.Condition = value;
+                this.OnPropertyChanged("Condition");
+            }
+        }
+
+        public IEnumerable<Condition> Conditions { get { return Enum.GetValues(typeof(Condition)) as IEnumerable<Condition>; } }
+
+
         /// <summary>
         /// Gets or sets a value indicating whether the IsSelected is true or false.
         /// </summary>
@@ -77,7 +96,7 @@ namespace OrderEntrySystem
         /// <summary>
         /// Gets or sets the Location property.
         /// </summary>
-        public string Location
+        public Location Location
         {
             get
             {
@@ -90,6 +109,24 @@ namespace OrderEntrySystem
                 this.OnPropertyChanged("Location");
             }
         }
+
+        public Category Category
+        {
+            get
+            {
+                return this.product.Category;
+            }
+            set
+            {
+                this.product.Category = value;
+                this.OnPropertyChanged("Category");
+            }
+        }
+
+        public IEnumerable<Location> Locations { get { return this.repo.GetLocations(); } }
+
+        public IEnumerable<Category> Categories { get { return this.repo.GetCategories(); } }
+
 
         /// <summary>
         /// Gets or sets the Name property.
@@ -157,6 +194,19 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
+            this.Commands.Add(new CommandViewModel("OK", new DelegateCommand(p => this.OkExecute())));
+            this.Commands.Add(new CommandViewModel("Cancel", new DelegateCommand(p => this.CancelExecute())));
+        }
+
+        private void OkExecute()
+        {
+            this.Save();
+            this.CloseAction(true);
+        }
+  
+        private void CancelExecute()
+        {
+            this.CloseAction(false);
         }
     }
 }

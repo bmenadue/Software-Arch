@@ -50,6 +50,8 @@ namespace OrderEntrySystem
             }
         }
 
+        public Action<bool> CloseAction { get; set; }
+
         /// <summary>
         /// Gets the commands.
         /// </summary>

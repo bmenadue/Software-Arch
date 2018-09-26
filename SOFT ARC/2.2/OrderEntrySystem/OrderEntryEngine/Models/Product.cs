@@ -10,8 +10,13 @@ namespace OrderEntryEngine.Models
         /// <summary>
         /// Gets or sets the Location field.
         /// </summary>
-        [MaxLength(100)]
-        public string Location { get; set; }
+        public virtual Location Location { get; set; }
+
+        public int LocationID { get; set; }
+
+        public virtual Category Category { get; set; }
+
+        public int CategroyID { get; set; }
 
         /// <summary>
         /// Gets or sets the Name field.
@@ -36,5 +41,10 @@ namespace OrderEntryEngine.Models
         /// Gets or sets the Id.
         /// </summary>
         public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Condition.
+        /// </summary>
+        public Condition Condition { get; set; }
     }
 }

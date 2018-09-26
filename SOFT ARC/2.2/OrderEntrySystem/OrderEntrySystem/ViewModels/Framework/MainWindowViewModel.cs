@@ -55,12 +55,25 @@ namespace OrderEntrySystem
         /// </summary>
         public void CreateNewProduct()
         {
-            Product product = new Product { Location = "Main Warehouse", Description = "This is a product", Name = "This is the name", Price = 0 };
+            Product product = new Product { LocationID =1, Description = "This is a product", Name = "This is the name", Price = 0 };
             ProductViewModel pvm = new ProductViewModel(product, this.repo);
             pvm.RequestClose += this.OnWorkspaceRequestClose;
             this.ViewModels.Add(pvm);
             this.ActivateViewModel(pvm);
         }
+
+        /// <summary>
+        /// This method creates a new view model.
+        /// </summary>
+        public void CreateNewCategoy()
+        {
+            Category category = new Category { Name ="Dumb" };
+            CategoryViewModel cvm = new CategoryViewModel(category, this.repo);
+            cvm.RequestClose += this.OnWorkspaceRequestClose;
+            this.ViewModels.Add(cvm);
+            this.ActivateViewModel(cvm);
+        }
+
 
         /// <summary>
         /// This method creates a new view model of customer.
@@ -106,6 +119,24 @@ namespace OrderEntrySystem
         }
 
         /// <summary>
+        /// Shows all products.
+        /// </summary>
+        public void ShowAllCategorys()
+        {
+            MultiCategoryViewModel viewModel = this.ViewModels.FirstOrDefault(vm => vm is MultiCategoryViewModel) as MultiCategoryViewModel;
+
+            if (viewModel == null)
+            {
+                MultiCategoryViewModel mcvm = new MultiCategoryViewModel(this.repo);
+                mcvm.RequestClose += this.OnWorkspaceRequestClose;
+                this.ViewModels.Add(mcvm);
+            }
+
+            this.ActivateViewModel(viewModel);
+        }
+
+
+        /// <summary>
         /// Shows all customers.
         /// </summary>
         public void ShowAllCustomers()
@@ -145,12 +176,12 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
-            this.Commands.Add(new CommandViewModel("New product", new DelegateCommand(p => this.CreateNewProduct())));
-            this.Commands.Add(new CommandViewModel("New Customer", new DelegateCommand(p => this.CreateNewCustomer())));
-            this.Commands.Add(new CommandViewModel("New Location", new DelegateCommand(p => this.CreateNewLocation())));
+           
             this.Commands.Add(new CommandViewModel("View all products", new DelegateCommand(p => this.ShowAllProducts())));
             this.Commands.Add(new CommandViewModel("View all customers", new DelegateCommand(p => this.ShowAllCustomers())));
             this.Commands.Add(new CommandViewModel("View all locaitons", new DelegateCommand(p => this.ShowAllLocations())));
+            this.Commands.Add(new CommandViewModel("View all categorys", new DelegateCommand(p => this.ShowAllCategorys())));
+
         }
 
         /// <summary>
