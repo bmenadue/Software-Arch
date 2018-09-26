@@ -1,5 +1,8 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Input;
 using OrderEntryDataAccess;
+using OrderEntryEngine;
 using OrderEntryEngine.Models;
 
 namespace OrderEntrySystem
@@ -40,6 +43,22 @@ namespace OrderEntrySystem
             this.repo = repo;
             this.product = product;
         }
+
+        public Condition Condition
+        {
+            get
+            {
+                return product.Condition;
+            }
+            set
+            {
+                product.Condition = value;
+                this.OnPropertyChanged("Condition");
+            }
+        }
+
+        public IEnumerable<Condition> Conditions { get { return Enum.GetValues(typeof(Condition)) as IEnumerable<Condition>; } }
+
 
         /// <summary>
         /// Gets or sets a value indicating whether the IsSelected is true or false.

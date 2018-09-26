@@ -36,5 +36,10 @@ namespace OrderEntryEngine.Models
         /// Gets or sets the Id.
         /// </summary>
         public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Condition.
+        /// </summary>
+        public Condition Condition { get; set; }
     }
 }

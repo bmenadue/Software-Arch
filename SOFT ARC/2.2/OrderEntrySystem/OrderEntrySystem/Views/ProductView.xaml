@@ -18,7 +18,10 @@
         <Label x:Name="lblPrice" Content="Price:" Grid.Column="0" Grid.Row="6"></Label>
         <TextBox x:Name="txtPrice" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" Height="23" Margin="1.4,5.2,0,7.8" TextWrapping="Wrap" Text="{Binding Path=Price, UpdateSourceTrigger=PropertyChanged}" Width="120"></TextBox>
 
-        <Button x:Name="btnSave" Grid.Column="2" Grid.Row="8" Content="Save" Command="{Binding SaveCommand, UpdateSourceTrigger=PropertyChanged}"></Button>
+        <Label x:Name="lblCondition" Content="Condition:" Grid.Column="0" Grid.Row="8"></Label>
+        <ComboBox x:Name="cmbConditions" ItemsSource="{Binding Conditions}" SelectedItem="{Binding Condition}" Grid.Column="2" Grid.Row="8"></ComboBox>
+
+        <Button x:Name="btnSave" Grid.Column="2" Grid.Row="10" Content="Save" Command="{Binding SaveCommand, UpdateSourceTrigger=PropertyChanged}"></Button>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -27,6 +30,10 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="4" />
             <RowDefinition Height="Auto" />
