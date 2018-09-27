@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace OrderEntryEngine
 {
+    /// <summary>
+    /// Represents a condition.
+    /// </summary>
     public enum Condition
     {
+        /// <summary>
+        /// Poor.
+        /// </summary>
         Poor,
-        Average, 
-        Excellent
 
+        /// <summary>
+        /// Average.
+        /// </summary>
+        Average, 
+
+        /// <summary>
+        /// Execellent.
+        /// </summary>
+        Excellent
     }
 }

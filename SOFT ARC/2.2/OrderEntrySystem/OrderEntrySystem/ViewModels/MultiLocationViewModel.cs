@@ -61,9 +61,30 @@ namespace OrderEntrySystem
         {
             this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewLocationExecute())));
             this.Commands.Add(new CommandViewModel("Edit...", new DelegateCommand(p => this.EditLocationExecute())));
-
         }
 
+        /// <summary>
+        /// This will show the location.
+        /// </summary>
+        /// <param name="viewModel">The view model we are showing.</param>
+        private static void ShowLocation(LocationViewModel viewModel)
+        {
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
+
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            LocationView view = new LocationView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
+        }
+
+        /// <summary>
+        /// Creates a new product execute.
+        /// </summary>
         private void CreateNewLocationExecute()
         {
             LocationViewModel viewModel = new LocationViewModel(new Location(), this.repo);
@@ -71,6 +92,9 @@ namespace OrderEntrySystem
             ShowLocation(viewModel);
         }
 
+        /// <summary>
+        /// This will enable the Edit Location.
+        /// </summary>
         private void EditLocationExecute()
         {
             try
@@ -85,21 +109,6 @@ namespace OrderEntrySystem
             {
                 MessageBox.Show("You can only select one product.");
             }
-        }
-
-        private static void ShowLocation(LocationViewModel viewModel)
-        {
-            WorkspaceWindow window = new WorkspaceWindow();
-            window.Width = 400;
-            window.Title = viewModel.DisplayName;
-
-            viewModel.CloseAction = b => window.DialogResult = b;
-
-            LocationView view = new LocationView();
-            view.DataContext = viewModel;
-
-            window.Content = view;
-            window.ShowDialog();
         }
 
         /// <summary>

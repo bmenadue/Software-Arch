@@ -12,10 +12,19 @@ namespace OrderEntryEngine.Models
         /// </summary>
         public virtual Location Location { get; set; }
 
+        /// <summary>
+        /// Gets or sets the location ID.
+        /// </summary>
         public int LocationID { get; set; }
 
+        /// <summary>
+        /// Gets or sets the category.
+        /// </summary>
         public virtual Category Category { get; set; }
 
+        /// <summary>
+        /// Gets or sets the category ID.
+        /// </summary>
         public int CategroyID { get; set; }
 
         /// <summary>

@@ -1,0 +1,20 @@
+﻿OrderEntrySystem
+
+
+winexe
+C#
+.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\
+OrderEntrySystem
+none
+false
+DEBUG;TRACE
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\App.xaml
+12795478932
+
+28-442045445
+16-674816628
+Views\MultiCategoryView.xaml;Views\CategoryView.xaml;Views\CustomerView.xaml;Views\LocationView.xaml;Views\MainWindow.xaml;Views\MultiCustomerView.xaml;Views\MultiLocationView.xaml;Views\MultiProductView.xaml;Views\ProductView.xaml;Views\SelectedItemsView.xaml;Views\SharedResources.xaml;Views\WorkspaceWindow.xaml;
+
+True
+

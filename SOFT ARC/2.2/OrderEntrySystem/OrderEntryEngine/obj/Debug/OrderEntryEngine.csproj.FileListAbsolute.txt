@@ -10,3 +10,10 @@ C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntryS
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.csproj.CopyComplete
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.dll
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.pdb
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\bin\Debug\OrderEntryEngine.dll.config
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\bin\Debug\OrderEntryEngine.dll
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\bin\Debug\OrderEntryEngine.pdb
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.csproj.CoreCompileInputs.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.dll
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.pdb
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryEngine\obj\Debug\OrderEntryEngine.csprojAssemblyReference.cache

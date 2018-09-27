@@ -15,13 +15,16 @@ using System.Windows.Shapes;
 namespace OrderEntrySystem
 {
     /// <summary>
-    /// Interaction logic for WorkspaceWindow.xaml
+    /// Interaction logic for WorkspaceWindow.xaml.
     /// </summary>
     public partial class WorkspaceWindow : Window
     {
+        /// <summary>
+        /// Initializes a new instance of the WorkspaceWindow class.
+        /// </summary>
         public WorkspaceWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }
