@@ -38,7 +38,6 @@ namespace OrderEntryDataAccess
         /// </summary>
         public event EventHandler<CategoryEventArgs> CategoryAdded;
 
-
         #endregion
 
         /// <summary>
@@ -142,7 +141,7 @@ namespace OrderEntryDataAccess
         /// <summary>
         /// When you add a location.
         /// </summary>
-        /// <param name="location">The location being added.</param>
+        /// <param name="category">The location being added.</param>
         public void AddCategory(Category category)
         {
             if (!this.ContainsCategory(category))
@@ -192,7 +191,7 @@ namespace OrderEntryDataAccess
         /// <summary>
         /// Checks if it contains the product.
         /// </summary>
-        /// <param name="product">The product being checked.</param>
+        /// <param name="category">The product being checked.</param>
         /// <returns>True or false.</returns>
         private bool ContainsCategory(Category category)
         {

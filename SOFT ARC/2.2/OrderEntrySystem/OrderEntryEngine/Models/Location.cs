@@ -1,5 +1,5 @@
-﻿using OrderEntryEngine.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using OrderEntryEngine.Models;
 
 namespace OrderEntryEngine
 {
@@ -33,8 +33,15 @@ namespace OrderEntryEngine
         /// </summary>
         public string State { get; set; }
 
+        /// <summary>
+        /// Gets or sets a ICollection of products.
+        /// </summary>
         public virtual ICollection<Product> Products { get; set; }
 
+        /// <summary>
+        /// Overrides the to string method.
+        /// </summary>
+        /// <returns>The new string.</returns>
         public override string ToString()
         {
             return this.Name;

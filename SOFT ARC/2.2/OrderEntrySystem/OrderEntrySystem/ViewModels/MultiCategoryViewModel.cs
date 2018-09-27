@@ -1,6 +1,4 @@
-﻿using OrderEntryDataAccess;
-using OrderEntryEngine;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -8,9 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using OrderEntryDataAccess;
+using OrderEntryEngine;
 
 namespace OrderEntrySystem
 {
+    /// <summary>
+    /// Represents a multi category view model.
+    /// </summary>
     public class MultiCategoryViewModel : WorkspaceViewModel
     {
         /// <summary>
@@ -19,7 +22,7 @@ namespace OrderEntrySystem
         private Repository repo;
 
         /// <summary>
-        /// Initializes a new instance of the MultiCustomerViewModel class.
+        /// Initializes a new instance of the MultiCategoryViewModel class.
         /// </summary>
         /// <param name="repo">The repository.</param>
         public MultiCategoryViewModel(Repository repo)
@@ -61,9 +64,30 @@ namespace OrderEntrySystem
         {
             this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewCategoryExecute())));
             this.Commands.Add(new CommandViewModel("Edit...", new DelegateCommand(p => this.EditCategoryExecute())));
-
         }
 
+        /// <summary>
+        /// This shows the product.
+        /// </summary>
+        /// <param name="viewModel">The view model being shown.</param>
+        private static void ShowCategory(CategoryViewModel viewModel)
+        {
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
+
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            CategoryView view = new CategoryView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
+        }
+
+        /// <summary>
+        /// Creates a new product execute.
+        /// </summary>
         private void CreateNewCategoryExecute()
         {
             CategoryViewModel viewModel = new CategoryViewModel(new Category(), this.repo);
@@ -71,6 +95,9 @@ namespace OrderEntrySystem
             ShowCategory(viewModel);
         }
 
+        /// <summary>
+        /// Enables the edit product execute.
+        /// </summary>
         private void EditCategoryExecute()
         {
             try
@@ -85,21 +112,6 @@ namespace OrderEntrySystem
             {
                 MessageBox.Show("You can only select one customer.");
             }
-        }
-
-        private static void ShowCategory(CategoryViewModel viewModel)
-        {
-            WorkspaceWindow window = new WorkspaceWindow();
-            window.Width = 400;
-            window.Title = viewModel.DisplayName;
-
-            viewModel.CloseAction = b => window.DialogResult = b;
-
-            CategoryView view = new CategoryView();
-            view.DataContext = viewModel;
-
-            window.Content = view;
-            window.ShowDialog();
         }
 
         /// <summary>

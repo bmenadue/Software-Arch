@@ -1,17 +1,19 @@
-﻿using OrderEntryDataAccess;
-using OrderEntryEngine;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using OrderEntryDataAccess;
+using OrderEntryEngine;
 
 namespace OrderEntrySystem
 {
+    /// <summary>
+    /// This represents a category view model which is a workspace view model.
+    /// </summary>
     public class CategoryViewModel : WorkspaceViewModel
     {
-
         /// <summary>
         /// The save command.
         /// </summary>
@@ -33,9 +35,9 @@ namespace OrderEntrySystem
         private Repository repo;
 
         /// <summary>
-        /// Initializes a new instance of the LocationViewModel class.
+        /// Initializes a new instance of the CategoryViewModel class.
         /// </summary>
-        /// <param name="location">The location.</param>
+        /// <param name="category">The location.</param>
         /// <param name="repo">The repository.</param>
         public CategoryViewModel(Category category, Repository repo)
             : base("Category")
@@ -103,12 +105,18 @@ namespace OrderEntrySystem
             this.Commands.Add(new CommandViewModel("Cancel", new DelegateCommand(p => this.CancelExecute())));
         }
 
+        /// <summary>
+        /// This is the OK execute.
+        /// </summary>
         private void OkExecute()
         {
             this.Save();
             this.CloseAction(true);
         }
 
+        /// <summary>
+        /// This is the cancel execute.
+        /// </summary>
         private void CancelExecute()
         {
             this.CloseAction(false);
@@ -123,6 +131,5 @@ namespace OrderEntrySystem
 
             this.repo.SaveToDatabase();
         }
-
     }
 }

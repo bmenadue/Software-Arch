@@ -44,21 +44,55 @@ namespace OrderEntrySystem
             this.product = product;
         }
 
+        /// <summary>
+        /// Gets or sets the condition.
+        /// </summary>
         public Condition Condition
         {
             get
             {
-                return product.Condition;
+                return this.product.Condition;
             }
+
             set
             {
-                product.Condition = value;
+                this.product.Condition = value;
                 this.OnPropertyChanged("Condition");
             }
         }
 
-        public IEnumerable<Condition> Conditions { get { return Enum.GetValues(typeof(Condition)) as IEnumerable<Condition>; } }
+        /// <summary>
+        /// Gets the Conditions.
+        /// </summary>
+        public IEnumerable<Condition> Conditions
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Condition)) as IEnumerable<Condition>;
+            }
+        }
 
+        /// <summary>
+        /// Gets the Locations.
+        /// </summary>
+        public IEnumerable<Location> Locations
+        {
+            get
+            {
+                return this.repo.GetLocations();
+            }
+        }
+
+        /// <summary>
+        /// Gets the Categories.
+        /// </summary>
+        public IEnumerable<Category> Categories
+        {
+            get
+            {
+                return this.repo.GetCategories();
+            }
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether the IsSelected is true or false.
@@ -110,23 +144,22 @@ namespace OrderEntrySystem
             }
         }
 
+        /// <summary>
+        /// Gets or sets the category.
+        /// </summary>
         public Category Category
         {
             get
             {
                 return this.product.Category;
             }
+
             set
             {
                 this.product.Category = value;
                 this.OnPropertyChanged("Category");
             }
         }
-
-        public IEnumerable<Location> Locations { get { return this.repo.GetLocations(); } }
-
-        public IEnumerable<Category> Categories { get { return this.repo.GetCategories(); } }
-
 
         /// <summary>
         /// Gets or sets the Name property.
@@ -198,12 +231,18 @@ namespace OrderEntrySystem
             this.Commands.Add(new CommandViewModel("Cancel", new DelegateCommand(p => this.CancelExecute())));
         }
 
+        /// <summary>
+        /// This is the OK execute.
+        /// </summary>
         private void OkExecute()
         {
             this.Save();
             this.CloseAction(true);
         }
-  
+
+        /// <summary>
+        /// This is the cancel execute.
+        /// </summary>
         private void CancelExecute()
         {
             this.CloseAction(false);
