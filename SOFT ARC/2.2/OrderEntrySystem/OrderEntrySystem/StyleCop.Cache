@@ -621,9 +621,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="1088362463">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="MultiProductViewModel.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2018/09/03 12:01:57.814</styleCop>
@@ -647,4 +644,7 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="1088362463">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>
