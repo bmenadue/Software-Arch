@@ -1,6 +1,0 @@
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\bin\Debug\SchoolEntryDataAccess.dll
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\bin\Debug\SchoolEntryDataAccess.pdb
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\obj\Debug\SchoolEntryDataAccess.csprojAssemblyReference.cache
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\obj\Debug\SchoolEntryDataAccess.csproj.CoreCompileInputs.cache
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\obj\Debug\SchoolEntryDataAccess.dll
-C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntryDataAccess\obj\Debug\SchoolEntryDataAccess.pdb
