@@ -74,7 +74,6 @@ namespace OrderEntrySystem
             this.ActivateViewModel(cvm);
         }
 
-
         /// <summary>
         /// This method creates a new view model of customer.
         /// </summary>
@@ -135,7 +134,6 @@ namespace OrderEntrySystem
             this.ActivateViewModel(viewModel);
         }
 
-
         /// <summary>
         /// Shows all customers.
         /// </summary>
@@ -176,12 +174,10 @@ namespace OrderEntrySystem
         /// </summary>
         protected override void CreateCommands()
         {
-           
             this.Commands.Add(new CommandViewModel("View all products", new DelegateCommand(p => this.ShowAllProducts())));
             this.Commands.Add(new CommandViewModel("View all customers", new DelegateCommand(p => this.ShowAllCustomers())));
             this.Commands.Add(new CommandViewModel("View all locaitons", new DelegateCommand(p => this.ShowAllLocations())));
             this.Commands.Add(new CommandViewModel("View all categorys", new DelegateCommand(p => this.ShowAllCategorys())));
-
         }
 
         /// <summary>

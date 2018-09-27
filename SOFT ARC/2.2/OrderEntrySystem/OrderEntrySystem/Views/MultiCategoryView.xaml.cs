@@ -16,13 +16,16 @@ using System.Windows.Shapes;
 namespace OrderEntrySystem
 {
     /// <summary>
-    /// Interaction logic for MultiCategoryView.xaml
+    /// Interaction logic for MultiCategoryView.xaml.
     /// </summary>
     public partial class MultiCategoryView : UserControl
     {
+        /// <summary>
+        /// Initializes a new instance of the MultiCategoryView class.
+        /// </summary>
         public MultiCategoryView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }

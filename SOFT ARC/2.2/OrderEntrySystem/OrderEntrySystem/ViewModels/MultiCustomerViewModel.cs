@@ -61,16 +61,30 @@ namespace OrderEntrySystem
         {
             this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewCustomerExecute())));
             this.Commands.Add(new CommandViewModel("Edit...", new DelegateCommand(p => this.EditCustomerExecute())));
-
         }
 
-        private void CreateNewCustomerExecute()
+        /// <summary>
+        /// This shows the product.
+        /// </summary>
+        /// <param name="viewModel">The view model being shown.</param>
+        private static void ShowCustomer(CustomerViewModel viewModel)
         {
-            CustomerViewModel viewModel = new CustomerViewModel(new Customer(), this.repo);
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
 
-            ShowCustomer(viewModel);
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            CustomerView view = new CustomerView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
         }
 
+        /// <summary>
+        /// Enables the edit product execute.
+        /// </summary>
         private void EditCustomerExecute()
         {
             try
@@ -87,19 +101,14 @@ namespace OrderEntrySystem
             }
         }
 
-        private static void ShowCustomer(CustomerViewModel viewModel)
+        /// <summary>
+        /// Creates a new product execute.
+        /// </summary>
+        private void CreateNewCustomerExecute()
         {
-            WorkspaceWindow window = new WorkspaceWindow();
-            window.Width = 400;
-            window.Title = viewModel.DisplayName;
+            CustomerViewModel viewModel = new CustomerViewModel(new Customer(), this.repo);
 
-            viewModel.CloseAction = b => window.DialogResult = b;
-
-            CustomerView view = new CustomerView();
-            view.DataContext = viewModel;
-
-            window.Content = view;
-            window.ShowDialog();
+            ShowCustomer(viewModel);
         }
 
         /// <summary>

@@ -62,9 +62,30 @@ namespace OrderEntrySystem
         {
             this.Commands.Add(new CommandViewModel("New...", new DelegateCommand(p => this.CreateNewProductExecute())));
             this.Commands.Add(new CommandViewModel("Edit...", new DelegateCommand(p => this.EditProductExecute())));
-
         }
 
+        /// <summary>
+        /// This shows the product.
+        /// </summary>
+        /// <param name="viewModel">The view model being shown.</param>
+        private static void ShowProduct(ProductViewModel viewModel)
+        {
+            WorkspaceWindow window = new WorkspaceWindow();
+            window.Width = 400;
+            window.Title = viewModel.DisplayName;
+
+            viewModel.CloseAction = b => window.DialogResult = b;
+
+            ProductView view = new ProductView();
+            view.DataContext = viewModel;
+
+            window.Content = view;
+            window.ShowDialog();
+        }
+
+        /// <summary>
+        /// Creates a new product execute.
+        /// </summary>
         private void CreateNewProductExecute()
         {
             ProductViewModel viewModel = new ProductViewModel(new Product(), this.repo);
@@ -72,6 +93,9 @@ namespace OrderEntrySystem
             ShowProduct(viewModel);
         }
 
+        /// <summary>
+        /// Enables the edit product execute.
+        /// </summary>
         private void EditProductExecute()
         {
             try
@@ -86,21 +110,6 @@ namespace OrderEntrySystem
             {
                 MessageBox.Show("You can only select one product.");
             }
-        }
-
-        private static void ShowProduct(ProductViewModel viewModel)
-        {
-            WorkspaceWindow window = new WorkspaceWindow();
-            window.Width = 400;
-            window.Title = viewModel.DisplayName;
-
-            viewModel.CloseAction = b => window.DialogResult = b;
-
-            ProductView view = new ProductView();
-            view.DataContext = viewModel;
-
-            window.Content = view;
-            window.ShowDialog();
         }
 
         /// <summary>

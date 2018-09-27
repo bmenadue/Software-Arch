@@ -13,3 +13,5 @@ C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntryS
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryDataAccess\obj\Debug\OrderEntryDataAccess.csproj.CopyComplete
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryDataAccess\obj\Debug\OrderEntryDataAccess.dll
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryDataAccess\obj\Debug\OrderEntryDataAccess.pdb
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryDataAccess\obj\Debug\OrderEntryDataAccess.csprojAssemblyReference.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntryDataAccess\obj\Debug\OrderEntryDataAccess.csproj.CoreCompileInputs.cache

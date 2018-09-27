@@ -47,3 +47,22 @@ C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntryS
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CategoryView.g.cs
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiCategoryView.baml
 C:\Users\16264806\Documents\Software-Arch\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CategoryView.baml
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\OrderEntrySystem Menadue.csprojAssemblyReference.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CustomerView.baml
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\LocationView.baml
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\ProductView.baml
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiCategoryView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CategoryView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\CustomerView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\LocationView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MainWindow.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiCustomerView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiLocationView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\MultiProductView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\ProductView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\SelectedItemsView.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\Views\WorkspaceWindow.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\App.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\OrderEntrySystem_MarkupCompile.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\2.2\OrderEntrySystem\OrderEntrySystem\obj\Debug\OrderEntrySystem_MarkupCompile.lref

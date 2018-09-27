@@ -151,12 +151,18 @@ namespace OrderEntrySystem
             this.Commands.Add(new CommandViewModel("Cancel", new DelegateCommand(p => this.CancelExecute())));
         }
 
+        /// <summary>
+        /// This is the OK execute.
+        /// </summary>
         private void OkExecute()
         {
             this.Save();
             this.CloseAction(true);
         }
 
+        /// <summary>
+        /// This is the cancel execute.
+        /// </summary>
         private void CancelExecute()
         {
             this.CloseAction(false);

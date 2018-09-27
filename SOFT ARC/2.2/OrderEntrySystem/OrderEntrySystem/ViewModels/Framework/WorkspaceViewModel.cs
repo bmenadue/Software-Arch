@@ -50,6 +50,9 @@ namespace OrderEntrySystem
             }
         }
 
+        /// <summary>
+        /// Gets or sets the close action.
+        /// </summary>
         public Action<bool> CloseAction { get; set; }
 
         /// <summary>

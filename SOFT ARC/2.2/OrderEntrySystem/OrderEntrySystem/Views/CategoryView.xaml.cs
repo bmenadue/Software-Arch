@@ -16,13 +16,16 @@ using System.Windows.Shapes;
 namespace OrderEntrySystem
 {
     /// <summary>
-    /// Interaction logic for CategoryView.xaml
+    /// Interaction logic for CategoryView.xaml.
     /// </summary>
     public partial class CategoryView : UserControl
     {
+        /// <summary>
+        /// Initializes a new instance of the CategoryView class.
+        /// </summary>
         public CategoryView()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }
