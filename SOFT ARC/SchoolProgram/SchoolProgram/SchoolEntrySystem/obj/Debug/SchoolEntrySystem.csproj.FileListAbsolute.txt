@@ -1,0 +1,6 @@
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\bin\Debug\SchoolEntrySystem.dll
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\bin\Debug\SchoolEntrySystem.pdb
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\obj\Debug\SchoolEntrySystem.csprojAssemblyReference.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\obj\Debug\SchoolEntrySystem.csproj.CoreCompileInputs.cache
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\obj\Debug\SchoolEntrySystem.dll
+C:\Users\bmenadue\Documents\School\SoftArc\correctone\Software-Arch\SOFT ARC\SchoolProgram\SchoolProgram\SchoolEntrySystem\obj\Debug\SchoolEntrySystem.pdb
